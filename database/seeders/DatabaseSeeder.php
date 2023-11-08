@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         Phone::factory(10)->create();
+         User::factory(10)->create()->each(function($user) {
+             $phone = Phone::factory()->make();
+             $user->phone()->save($phone);
+         });
     }
 }

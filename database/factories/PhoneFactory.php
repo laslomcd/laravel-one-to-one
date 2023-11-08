@@ -15,8 +15,7 @@ class PhoneFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::factory(1)->create()->first(),
-            'phone_type' => $this->faker->sentence,
+            'phone_type' => $this->faker->company,
             'phone_number' => $this->faker->phoneNumber,
         ];
     }
