@@ -31,6 +31,6 @@ class DataController extends Controller
             'phone_number' => $request->number
         ]);
         $phone->save();
-        return redirect('/all')->with('message', 'User was added');
+        return redirect('/all')->with('success', 'User was added');
     }
 }
